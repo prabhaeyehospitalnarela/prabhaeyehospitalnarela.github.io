@@ -453,53 +453,76 @@
       <!-- ============================================-->
 
 
-      <section class="py-5">
-        <div class="container">
-          <div class="row">
+    <section class="py-5">
+    <div class="container">
+        <div class="row">
             <div class="bg-holder bg-size" style="background-image:url(assets/img/gallery/dot-bg.png);background-position:bottom right;background-size:auto;">
             </div>
             <!--/.bg-holder-->
 
             <div class="col-lg-6 z-index-2 mb-5"><img class="w-100" src="assets/img/gallery/appointment.png" alt="..." /></div>
             <div class="col-lg-6 z-index-2">
-              <form class="row g-3">
-                <div class="col-md-6">
-                  <label class="visually-hidden" for="inputName">Name</label>
-                  <input class="form-control form-livedoc-control" id="inputName" type="text" placeholder="Name" />
-                </div>
-                <div class="col-md-6">
-                  <label class="visually-hidden" for="inputPhone">Phone</label>
-                  <input class="form-control form-livedoc-control" id="inputPhone" type="text" placeholder="Phone" />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label visually-hidden" for="inputCategory">Category</label>
-                  <select class="form-select" id="inputCategory">
-                    <option selected="selected">Category</option>
-                    <option> Eye Checkup</option>
-                    <option> Retina</option>
-                    <option> Surgery</option>
-                    <option> Other</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label visually-hidden" for="inputEmail">Email</label>
-                  <input class="form-control form-livedoc-control" id="inputEmail" type="email" placeholder="Email" />
-                </div>
-                <div class="col-md-12">
-                  <label class="form-label visually-hidden" for="validationTextarea">Message</label>
-                  <textarea class="form-control form-livedoc-control" id="validationTextarea" placeholder="Message" style="height: 250px;" required="required"></textarea>
-                </div>
-                <div class="col-12">
-                  <div class="d-grid">
-                    <button class="btn btn-primary rounded-pill" type="submit">Submit</button>
-                  </div>
-                </div>
-              </form>
+                <form class="row g-3" id="appointmentForm" target="_blank" action="https://formsubmit.co/cfb47e2d977a3dc5415a2456c62ab363" method="POST">
+                    <div class="col-md-6">
+                        <label class="visually-hidden" for="inputName">Name</label>
+                        <input class="form-control form-livedoc-control" id="inputName" name="name" type="text" placeholder="Name" required />
+                    </div>
+                    <!-- <div class="col-md-6">
+                        <label class="visually-hidden" for="inputPhone">Phone</label>
+                        <input class="form-control form-livedoc-control" id="inputPhone" name="phone" type="text" placeholder="Phone" required />
+                    </div> -->
+                    <!-- <div class="col-md-6">
+                        <label class="form-label visually-hidden" for="inputCategory">Category</label>
+                        <select class="form-select" id="inputCategory" name="category" required>
+                            <option value="" selected disabled>Select Category</option>
+                            <option value="Eye Checkup">Eye Checkup</option>
+                            <option value="Retina">Retina</option>
+                            <option value="Surgery">Surgery</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div> -->
+                    <div class="col-md-6">
+                        <label class="form-label visually-hidden" for="inputEmail">Email</label>
+                        <input class="form-control form-livedoc-control" id="inputEmail" name="email" type="email" placeholder="Email" required />
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label visually-hidden" for="validationTextarea">Message</label>
+                        <textarea class="form-control form-livedoc-control" id="validationTextarea" name="message" placeholder="Message" style="height: 250px;" required></textarea>
+                    </div>
+                    <input type="hidden" name="_next" value="https://prabhaeyehospitalnarela.com">
+                    <input type="hidden" name="_url" value="https://prabhaeyehospitalnarela.com">
+                    <div class="col-12">
+                        <div class="d-grid">
+                            <button class="btn btn-primary rounded-pill" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-          </div>
         </div>
-      </section>
+    </div>
+</section>
 
+<!-- <div class="container">
+  <h1>FormSubmit Demo</h1>
+  <form target="_blank" action="https://formsubmit.co/cfb47e2d977a3dc5415a2456c62ab363" method="POST">
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+    </div>
+    <input type="hidden" name="_next" value="https://prabhaeyehospitalnarela.com">
+    <input type="hidden" name="_url" value="https://yourdomain.co/contact.html">
+    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+  </form>
+</div> -->
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
