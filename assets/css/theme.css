@@ -18571,6 +18571,12 @@ ul {
   height: 100%;
   object-fit: cover; /* Ensures the image covers the entire space */
 }
+
+.small-icon {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+}
+
 /*-----------------------------------------------
 |   User Styles
 -----------------------------------------------*/
