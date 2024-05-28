@@ -766,41 +766,64 @@
 
             <div class="col-lg-6 z-index-2 mb-5"><img class="w-100" src="assets/img/gallery/appointment2.jpg" alt="..." /></div>
             <div class="col-lg-6 z-index-2">
-                <form class="row g-3" id="appointmentForm" target="_blank" action="https://formsubmit.co/cfb47e2d977a3dc5415a2456c62ab363" method="POST">
-                    <div class="col-md-6">
-                        <label class="visually-hidden" for="inputName">Name</label>
-                        <input class="form-control form-livedoc-control" id="inputName" name="name" type="text" placeholder="Name" required />
+
+              <form class="row g-3" id="appointmentForm" target="_blank" action="https://formsubmit.co/cfb47e2d977a3dc5415a2456c62ab363" method="POST">
+                <div class="col-md-6">
+                    <label class="visually-hidden" for="inputName">Name</label>
+                    <input class="form-control form-livedoc-control" id="inputName" name="name" type="text" placeholder="Name" required />
+                </div>
+                <div class="col-md-6">
+                    <label class="visually-hidden" for="inputPhone">Phone</label>
+                    <input class="form-control form-livedoc-control" id="inputPhone" type="text" placeholder="Phone" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label visually-hidden" for="inputCategory">Category</label>
+                    <select class="form-select" id="inputCategory">
+                        <option selected="selected">Category</option>
+                        <option>Eye Checkup</option>
+                        <option>Retina</option>
+                        <option>Surgery</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label visually-hidden" for="inputEmail">Email</label>
+                    <input class="form-control form-livedoc-control" id="inputEmail" name="email" type="email" placeholder="Email" required />
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label visually-hidden" for="validationTextarea">Message</label>
+                    <textarea class="form-control form-livedoc-control" id="validationTextarea" name="message" placeholder="Message" style="height: 250px;" required></textarea>
+                </div>
+                <input type="hidden" name="_next" value="https://prabhaeyehospitalnarela.com">
+                <input type="hidden" name="_url" value="https://prabhaeyehospitalnarela.com">
+                <div class="col-12">
+                    <div class="d-grid">
+                        <button class="btn btn-primary rounded-pill" type="submit">Submit</button>
                     </div>
-                    <div class="col-md-6">
-                        <label class="visually-hidden" for="inputPhone">Phone</label>
-                        <input class="form-control form-livedoc-control" id="inputPhone" type="text" placeholder="Phone" />
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label visually-hidden" for="inputCategory">Category</label>
-                        <select class="form-select" id="inputCategory">
-                          <option selected="selected">Category</option>
-                          <option> Eye Checkup</option>
-                          <option> Retina</option>
-                          <option> Surgery</option>
-                          <option> Other</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label visually-hidden" for="inputEmail">Email</label>
-                        <input class="form-control form-livedoc-control" id="inputEmail" name="email" type="email" placeholder="Email" required />
-                    </div>
-                    <div class="col-md-12">
-                        <label class="form-label visually-hidden" for="validationTextarea">Message</label>
-                        <textarea class="form-control form-livedoc-control" id="validationTextarea" name="message" placeholder="Message" style="height: 250px;" required></textarea>
-                    </div>
-                    <input type="hidden" name="_next" value="https://prabhaeyehospitalnarela.com">
-                    <input type="hidden" name="_url" value="https://prabhaeyehospitalnarela.com">
-                    <div class="col-12">
-                        <div class="d-grid">
-                            <button class="btn btn-primary rounded-pill" type="submit">Submit</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
+              </form>
+
+              <script>
+                document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Prevent the default form submission
+                    
+                    // Get the values from the form fields
+                    var name = document.getElementById("inputName").value;
+                    var phone = document.getElementById("inputPhone").value;
+                    var category = document.getElementById("inputCategory").value;
+                    var email = document.getElementById("inputEmail").value;
+                    var message = document.getElementById("validationTextarea").value;
+                    
+                    // Append phone number and category to the message
+                    message = "Phone: " + phone + "\n\nCategory: " + category + "\n\nMessage: \n" + message;
+                    
+                    // Set the updated message back to the textarea
+                    document.getElementById("validationTextarea").value = message;
+                    
+                    // Submit the form
+                    this.submit();
+                });
+              </script>
             </div>
         </div>
     </div>
